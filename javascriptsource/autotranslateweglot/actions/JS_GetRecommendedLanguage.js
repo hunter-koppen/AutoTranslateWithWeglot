@@ -15,7 +15,7 @@ import { Big } from "big.js";
  * Javascript action to check which Language Weglot recommends based on the user's browser settings.
  * @returns {Promise.<string>}
  */
-export async function JS_Weglot_GetRecommendedLanguage() {
+export async function JS_GetRecommendedLanguage() {
 	// BEGIN USER CODE
 	if (typeof Weglot === "object") {
 		return Weglot.getBestAvailableLanguage();

@@ -14,10 +14,10 @@ import { Big } from "big.js";
 /**
  * @returns {Promise.<string>}
  */
-export async function JS_Weglot_GetAvailableLanguages() {
+export async function JS_GetCurrentLanguage() {
 	// BEGIN USER CODE
 	if (typeof Weglot === "object") {
-		return Weglot.getAvailableLanguages().toString();
+		return Weglot.getCurrentLang();
 	} else {
 		console.error("Weglot not initialized")
 		return;

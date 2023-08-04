@@ -12,15 +12,15 @@ import { Big } from "big.js";
 // END EXTRA CODE
 
 /**
- * @returns {Promise.<string>}
+ * @param {string} code - 2 letter code of the language (e.g. "en")
+ * @returns {Promise.<void>}
  */
-export async function JS_Weglot_GetCurrentLanguage() {
+export async function JS_SetLanguage(code) {
 	// BEGIN USER CODE
 	if (typeof Weglot === "object") {
-		return Weglot.getCurrentLang();
+		Weglot.switchTo(code.toLowerCase());
 	} else {
 		console.error("Weglot not initialized")
-		return;
 	}
 	// END USER CODE
 }
